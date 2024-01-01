@@ -64,7 +64,7 @@ Route::prefix('administrator')->group(function () {
     });
     
     Route::get('/contact-admin2', function(){
-        return 'contact admin24';
+        return 'contact admin2';
     });
 });
 
