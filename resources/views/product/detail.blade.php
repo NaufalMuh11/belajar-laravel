@@ -6,8 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> Ini merupakan halaman kontak<h1>
-    <h2> {{$name}}<h2>
-    <h2> {{$phone}}<h2>
+    <h1> ini adalah product dengan id {{$id}}<h1>
 </body>
 </html>
