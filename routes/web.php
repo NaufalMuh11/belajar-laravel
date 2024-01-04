@@ -20,3 +20,7 @@ Route::get('/', function () {
         'buah' => ['pisang','durian', 'jeruk','lengkeng']
     ]);
 });
+
+Route::get('/about', function(){
+    return view('about');
+});
