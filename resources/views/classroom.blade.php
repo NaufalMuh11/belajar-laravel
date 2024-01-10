@@ -1,5 +1,9 @@
 @extends('layout.mainlayout')
-
+<style>
+    table{
+        font-size: 18px;
+    }
+</style>
 @section('title', 'Students')
 
 @section('content')
@@ -11,6 +15,7 @@
             <tr>
                 <th>No.</th>
                 <th>Name</th>
+                <th>Students</th>
             </tr>
     </thead>
     <tbody>
@@ -18,6 +23,10 @@
         <tr>
             <td>{{$loop->iteration}}</td>
             <td>{{$data->name}}</td>
+            <td>
+                @foreach ($data->students as $student)
+                - {{$student['name']}}<br>
+                @endforeach
         </tr>
         @endforeach
     </tbody>

@@ -10,13 +10,8 @@ class StudentController extends Controller
 {
     public function index(){
         // $student = Student::all(); // select * from students
-        // return view('student',['studentList'=> $student]);
-        
-        $nilai = [9,8,7,6,5,4,3,2,10,2,9,3];
-
-        $aa = collect($nilai)->map(function($value){
-            return $value *2;
-        })->all();
-        dd($aa);
+        $student = Student::with('class')->get();
+        return view('student',['studentList'=> $student]);
+  
     }
 }
