@@ -11,36 +11,12 @@ class StudentController extends Controller
     public function index(){
         // $student = Student::all(); // select * from students
         // return view('student',['studentList'=> $student]);
+        
+        $nilai = [9,8,7,6,5,4,3,2,10,2,9,3];
 
-        // QUERY BUILDER
-        // $student = DB::table('students')->get();
-        // dd($student);
-        // DB::table('students')->insert([
-        //     'name'=> 'query builder',
-        //     'gender'=> 'L',
-        //     'nis'=> '0201021',
-        //     'class_id'=> 1
-        // ]);
-            // DB::table('students')->where('id',30)->update([
-            //     'name'=> 'query builder 2',
-            //     'class_id'=> 3
-            // ]);
-        // DB::table('students')->where('id',30)->delete();
-
-
-        //ELOQUENTa
-        // $student= Student::all(); 
-        // dd($student);
-        // Student::create([
-        //     'name'=> 'query builder',
-        //     'gender'=> 'P',
-        //     'nis'=> '0201022',
-        //     'class_id'=> 1
-        // ]);
-        // Student::find(26)->update([
-        //     'name'=> 'eloquent 1',
-        //     'class_id'=>3
-        // ]);
-        Student::find(26)->delete();
+        $aa = collect($nilai)->map(function($value){
+            return $value *2;
+        })->all();
+        dd($aa);
     }
 }
