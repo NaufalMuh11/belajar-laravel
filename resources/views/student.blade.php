@@ -3,7 +3,7 @@
 @section('title', 'Students')
 <style>
     table{
-        font-size: 18px;
+        font-size: 14px;
     }
 </style>
 @section('content')
@@ -18,6 +18,7 @@
                 <th>Gender</th>
                 <th>NIS</th>
                 <th>Class</th>
+                <th>Extracurricular</th>
             </tr>
         </thead>
         <tbody>
@@ -29,7 +30,11 @@
                 <td>{{$data->nis}}</td>
                 {{-- <td>{{$data->class['name']}}</td> --}}
                 <td>{{$data->class['name']}}</td>
-            
+                <td>
+                    @foreach ($data->extracurriculars as $item)
+                        - {{$item->name}}<br>
+                    @endforeach
+                </td>
             </tr>                
             @endforeach
 @endsection

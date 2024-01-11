@@ -1,7 +1,7 @@
 @extends('layout.mainlayout')
 <style>
     table{
-        font-size: 18px;
+        font-size: 14px;
     }
 </style>
 @section('title', 'Students')
