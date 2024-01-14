@@ -9,7 +9,7 @@ class ExtracurricularController extends Controller
 {
     public function index()
     {
-        $ekskul = Extracurricular::with('students')->get();
+        $ekskul = Extracurricular::get();
         return view('extracurricular',['ekskulList'=> $ekskul]);
     }
 }

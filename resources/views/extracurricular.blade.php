@@ -15,7 +15,7 @@
                 <tr>
                     <th>No.</th>
                     <th>Name</th>
-                    <th>Anggota</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,11 +23,7 @@
                     <tr>
                         <td>{{$loop->iteration}}</td>
                         <td>{{$data->name}}</td>
-                        <td>
-                            @foreach ($data->students as $item)
-                                - {{$item ->name}} <br>
-                            @endforeach
-                        </td>
+                        <td><a href=''>Edit</a></td>
                     </tr>
                 @endforeach
         </table>
