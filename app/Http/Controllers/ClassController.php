@@ -11,7 +11,7 @@ class ClassController extends Controller
     {
         // $class = ClassRoom::all(); //Lazy Load
 
-        $class = ClassRoom::with('students')->get(); //Eager load
+        $class = ClassRoom::with('students','homeroomTeacher')->get(); //Eager load
         return view('classroom', ['classList' => $class]);
     }
 }
