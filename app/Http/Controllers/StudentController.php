@@ -15,7 +15,7 @@ class StudentController extends Controller
     }
 
     public function show($id){
-        $student = Student::with(['class'])
+        $student = Student::with(['class.homeroomTeacher','extracurriculars'])
             ->findOrFail($id);
         return view('student-detail',['student'=>$student]);
     }
